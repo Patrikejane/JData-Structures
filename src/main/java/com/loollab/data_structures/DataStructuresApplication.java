@@ -1,5 +1,6 @@
 package com.loollab.data_structures;
 
+import com.loollab.data_structures.Sorting.BubbleSort;
 import com.loollab.data_structures.datastructures.Stack.Stack;
 import com.loollab.data_structures.datastructures.Stack.StackNode;
 import org.springframework.boot.CommandLineRunner;
@@ -29,24 +30,12 @@ public class DataStructuresApplication {
 			myStack.push ( new StackNode <Integer> ( 1 ) );
 			myStack.push ( new StackNode <Integer> ( 1 ) );
 
-
 			Integer[] num = {0, 1, 0, 1, 0, 1, 0, 1, 0, 1};
-			for (var j = 0; j < 9; j++) {
-			for (var i = 1; i < 9 -j; i++) {
-				if (num[i] > num[i + 1]) {
-					var temp = num[i];
-					num[i] = num[i + 1];
-					num[i + 1] = temp;
-				}
-			}
-		}
+			Integer[] sortednum = BubbleSort.sort ( num,10);
 
-
-			for (var n : num) {
+			for (var n : sortednum) {
 				System.out.print(n + " ");
 			}
-
-
 		};
 
 	}
