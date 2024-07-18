@@ -7,9 +7,17 @@ package com.loollab.data_structures.Sorting;
  */
 public class InsertionSort {
 
-    public static Integer[] sort(Integer[] array,Integer arraySize){
-
-        return null;
+    public static Integer[] sort(Integer[] array,Integer arraySize)
+    {
+        for (var i = 1; i< arraySize -1; i++){
+            var key = array[i];
+            var j = i-1;
+            while (j >= 0 && array[j] > key){
+                array[j+1] = array[j];
+                j = j-1;
+            }
+            array[j + 1] = key;
+        }
+        return array;
     }
-
 }
