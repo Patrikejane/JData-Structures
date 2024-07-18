@@ -9,7 +9,7 @@ public class InsertionSort {
 
     public static Integer[] sort(Integer[] array,Integer arraySize)
     {
-        for (var i = 1; i< arraySize -1; i++){
+        for (var i = 1; i< arraySize; i++){
             var key = array[i];
             var j = i-1;
             while (j >= 0 && array[j] > key){
