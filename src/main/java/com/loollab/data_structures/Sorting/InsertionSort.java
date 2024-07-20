@@ -1,5 +1,7 @@
 package com.loollab.data_structures.Sorting;
 
+import java.util.Optional;
+
 /**
  * @author sskma
  * @Created 18/07/2024 - 1:09 AM
@@ -18,6 +20,7 @@ public class InsertionSort {
             }
             array[j + 1] = key;
         }
+
         return array;
     }
 }

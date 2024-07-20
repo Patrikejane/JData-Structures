@@ -3,6 +3,7 @@ package com.loollab.data_structures;
 import com.loollab.data_structures.Sorting.BubbleSort;
 import com.loollab.data_structures.datastructures.Stack.Stack;
 import com.loollab.data_structures.datastructures.Stack.StackNode;
+import com.loollab.data_structures.threads.VirtualThreads;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -36,6 +37,9 @@ public class DataStructuresApplication {
 			for (var n : sortednum) {
 				System.out.print(n + " ");
 			}
+
+			VirtualThreads.viewCarrierThreadPoolSize();
+
 		};
 
 	}
