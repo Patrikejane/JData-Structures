@@ -9,6 +9,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
+
 @SpringBootApplication
 public class DataStructuresApplication {
 
@@ -40,6 +45,21 @@ public class DataStructuresApplication {
 
 			VirtualThreads.viewCarrierThreadPoolSize();
 
+			VirtualThreads.ThreadCreator ();
+
+
+
+			CopyOnWriteArrayList <String> list = new CopyOnWriteArrayList<>();
+			list.add("A");
+			list.add("B");
+
+			Iterator<String> iterator = list.iterator();
+			list.add("C"); // Modification while iterating
+
+// This will not throw an exception; iterator will see a snapshot of the collection
+			while (iterator.hasNext()) {
+				System.out.println(iterator.next());
+			}
 		};
 
 	}
